@@ -1,0 +1,47 @@
+# Ignore binary files
+bin/
+
+# Random TLS files
+apiserver.local.config/
+
+# Ignore the kubeconfig file
+kubeconfig
+
+# Ignore envrc
+.envrc
+
+# Ignore any compiled Go binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Ignore Go build artifacts
+*.log
+*.test
+*.out
+
+# Ignore dependency directories
+vendor/
+
+# Ignore temporary files
+*.tmp
+*.swp
+*.swo
+*.bak
+*.old
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+*.iml
+
+# Ignore OS specific files
+.DS_Store
+Thumbs.db
+
+# Ignore local DB files
+orion101*.db**
+
+

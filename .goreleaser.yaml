@@ -1,0 +1,43 @@
+version: 2
+
+project_name: "orion101"
+
+builds:
+  - id: build
+    main: .
+    goos:
+      - linux
+      - darwin
+      - windows
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      - -X "github.com/gptscript-ai/orion101/pkg/version.Tag=v{{ .Version }}"
+
+archives:
+  - format: tar.gz
+    name_template: "{{ .ProjectName }}_v{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    format_overrides:
+      - goos: windows
+        format: zip
+
+release:
+  github:
+    owner: "galileo-galileii"
+    name: "orion101"
+  make_latest: false
+  prerelease: auto
+
+brews:
+  - name: orion101
+    description: "Orion101 CLI"
+    install: |
+      bin.install "orion101"
+    homepage: "https://github.com/galileo-galileii.orion101"
+    skip_upload: false
+    directory: "Formula"
+    repository:
+      owner: galileo-galileii
+      name: homebrew-tap
+      token: "{{ .Env.TAP_GITHUB_TOKEN }}"

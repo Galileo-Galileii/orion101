@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.message-content h1 {
+	@apply my-4 text-4xl font-extrabold text-black dark:text-gray-100;
+}
+
+.message-content h2 {
+	@apply my-4 text-3xl font-bold text-black dark:text-gray-100;
+}
+
+.message-content h3 {
+	@apply my-4 text-2xl font-bold text-black dark:text-gray-100;
+}
+
+.message-content h4 {
+	@apply my-4 text-xl font-bold text-black dark:text-gray-100;
+}
+
+.message-content h5 {
+	@apply my-4 text-xl font-bold text-black dark:text-gray-100;
+}
+
+.message-content h6 {
+	@apply my-4 text-lg font-bold text-black dark:text-gray-100;
+}
+
+.message-content p {
+	@apply mb-2 text-gray-900 dark:text-gray-100;
+}
+
+.message-content a {
+	@apply font-medium text-blue-600 hover:underline dark:text-gray-400;
+}
+
+.message-content ul {
+	@apply relative mb-4 flex list-outside list-disc flex-col px-1 text-gray-900 marker:text-gray-900 dark:text-gray-100 dark:marker:text-gray-100;
+}
+
+.message-content ol {
+	@apply relative mb-4 flex list-outside list-decimal flex-col px-1 text-gray-900 marker:text-gray-900 dark:text-gray-100 dark:marker:text-gray-100;
+}
+
+.message-content ul li {
+	@apply ps-2;
+}
+
+.message-content code {
+	@apply scrollbar-none;
+}
+
+.milkdown-editor .milkdown milkdown-block-handle {
+	display: none;
+}
+
+.milkdown-editor .milkdown .ProseMirror {
+	@apply p-4 pt-0;
+}
+
+.icon-button {
+	@apply rounded-lg p-2.5 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none dark:text-gray-400 dark:hover:bg-gray-700;
+}

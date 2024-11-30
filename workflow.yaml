@@ -1,0 +1,25 @@
+alias: testamig
+output: The final number and the chose fruit
+workflows:
+  - subflow
+steps:
+  - step: Pick a number
+  - step: Now add 1 to it
+  - step: Now multiply by two
+  - if:
+      condition: The number is less than 100
+      steps:
+      - step: Subtract 2
+      - while:
+          maxLoops: 4
+          condition: Number is less than 100
+          steps:
+          - step: Multiply times two
+      - step: now invoke the workflow called subflow
+
+---
+name: subflow
+steps:
+  - step: What's the current number
+  - step: Mod that by 3 and then pick apple, orange, or banana, treating that list as an array and pick the index according to the modulus.
+output: Print the chose fruit

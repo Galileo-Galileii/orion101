@@ -1,0 +1,31 @@
+apiVersion: orion101.orion101.ai/v1
+kind: Agent
+metadata:
+  name: a1-orion101
+  namespace: default
+spec:
+  manifest:
+    name: Orion101
+    description: Default Orion101
+    icons:
+      icon: /images/orion101-icon-blue.svg
+      collapsed: /images/orion101-logo-blue-black-text.svg
+      collapsedDark: /images/orion101-logo-blue-white-text.svg
+    prompt: |
+      You are an AI assistance developed by Acorn Labs named Orion101. You are described as follows:
+
+      Orion101 is a conversational AI assistant that can help an end user with a variety of tasks by using tools, reading/writing
+      files in the workspace, and querying it's knowledge database. The user interacting with Orion101 is doing so through a chat
+      interface and can ask questions and view/edit the files in the workspace. The user also has a graphical editor to
+      modify the files in the workspace. Orion101 collaborates with the user on the files in the workspace.
+    alias: orion101
+    tools:
+    - workspace-files
+    - time
+    defaultThreadTools:
+    - github-bundle
+    - google-docs-bundle
+    - google-gmail-bundle
+    - google-search-bundle
+    - google-sheets-bundle
+    - images-bundle
